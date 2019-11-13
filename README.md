@@ -1,7 +1,7 @@
 # util
 
 #### 介绍
-基础jar包
+基础jar包 供自定义的mybatis generator生成的类所在项目依赖用
 
 #### 软件架构
 软件架构说明

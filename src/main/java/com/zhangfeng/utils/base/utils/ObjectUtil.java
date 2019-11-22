@@ -9,6 +9,21 @@ import com.alibaba.fastjson.JSONObject;
 public class ObjectUtil {
 
   public static <T> T parseObject(Object object, Class<T> clazz) {
-    return JSONObject.parseObject(JSONObject.toJSONString(object), clazz);
+    String str = "";
+    if (object == null) {
+      try {
+        return clazz.newInstance();
+      } catch (InstantiationException e) {
+        e.printStackTrace();
+      } catch (IllegalAccessException e) {
+        e.printStackTrace();
+      }
+    }
+    if (object instanceof String) {
+      str = object.toString();
+    } else {
+      str = JSONObject.toJSONString(object);
+    }
+    return JSONObject.parseObject(str, clazz);
   }
 }

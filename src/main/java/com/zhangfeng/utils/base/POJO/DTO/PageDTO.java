@@ -4,7 +4,7 @@ public class PageDTO {
 
   private int pageSize;
 
-  private int pageNO;
+  private int pageNo;
 
   public int getPageSize() {
     return pageSize;
@@ -14,11 +14,11 @@ public class PageDTO {
     this.pageSize = pageSize;
   }
 
-  public int getPageNO() {
-    return pageNO;
+  public int getPageNo() {
+    return pageNo;
   }
 
-  public void setPageNO(int pageNO) {
-    this.pageNO = pageNO;
+  public void setPageNo(int pageNo) {
+    this.pageNo = pageNo;
   }
 }
